@@ -1,4 +1,4 @@
-**/User Profile with Follow Button
+**User Profile with Follow Button
 This is a React component that renders a user profile with a follow button. It uses useState and useEffect hooks to manage the state of whether the user is being followed and the number of followers. It also includes localStorage functionality to remember the user's follow state and the number of followers they have.
 
 ///Installation
