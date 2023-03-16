@@ -49,19 +49,19 @@ export const App = () => {
       <div className="wrapper">
         <div className="logo__box">
           <picture>
-            <source srcset={`${logo} 1x,${logoX} 2x`} />
+            <source srcSet={`${logo} 1x,${logoX} 2x`} />
             <img src={logo} alt="logo" width="76" height="20" />
           </picture>
         </div>
         <div className="picture_box">
           <picture>
-            <source srcset={`${picture} 1x,${pictureX} 2x`} />
+            <source srcSet={`${picture} 1x,${pictureX} 2x`} />
             <img src={picture} alt="message" width={307} />
           </picture>
         </div>
         <div className="wrapper__box">
           <div className="avatar__wrapper">
-            <source srcset={`${elipse} 1x,${elipseX} 2x`} />
+            <source srcSet={`${elipse} 1x,${elipseX} 2x`} />
             <img src={elipse} alt="message" width={80} className="elipse" />
             <picture>
               <img src={elipse} alt="avatar" width={62} className="avatar" />
