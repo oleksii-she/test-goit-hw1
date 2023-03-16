@@ -1,4 +1,13 @@
 import { useState, useEffect } from 'react';
+import {
+  picture,
+  logo,
+  elipse,
+  rectangle,
+  elipseX,
+  pictureX,
+  logoX,
+} from 'images';
 
 export const App = () => {
   const [isFollowing, setIsFollowing] = useState(false);
@@ -38,20 +47,43 @@ export const App = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <div>
-          <img src="" alt="" />
+        <div className="logo__box">
+          <picture>
+            <source srcset={`${logo} 1x,${logoX} 2x`} />
+            <img src={logo} alt="logo" width="76" height="20" />
+          </picture>
         </div>
-        <div>
-          <img src="" alt="" />
+        <div className="picture_box">
+          <picture>
+            <source srcset={`${picture} 1x,${pictureX} 2x`} />
+            <img src={picture} alt="message" width={307} />
+          </picture>
         </div>
-        <p className="text">777 tweets</p>
-        <p className="text">{formattedFollowersCount} Followers</p>
-        <button
-          onClick={handleFollowClick}
-          className={isFollowing ? 'button button__active' : 'button'}
-        >
-          {isFollowing ? 'Following' : 'Follow'}
-        </button>
+        <div className="wrapper__box">
+          <div className="avatar__wrapper">
+            <source srcset={`${elipse} 1x,${elipseX} 2x`} />
+            <img src={elipse} alt="message" width={80} className="elipse" />
+            <picture>
+              <img src={elipse} alt="avatar" width={62} className="avatar" />
+            </picture>
+
+            <img
+              src={rectangle}
+              alt="message"
+              className="rectangle"
+              width={380}
+              height={8}
+            />
+          </div>
+          <p className="text">777 tweets</p>
+          <p className="text">{formattedFollowersCount} Followers</p>
+          <button
+            onClick={handleFollowClick}
+            className={isFollowing ? 'button button__active' : 'button'}
+          >
+            {isFollowing ? 'Following' : 'Follow'}
+          </button>
+        </div>
       </div>
     </div>
   );

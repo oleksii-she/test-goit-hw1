@@ -1,5 +1,6 @@
 @import-normalize; /* bring in normalize.css styles */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -25,19 +26,14 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 100%;
   height: 100vh;
 }
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  position: relative;
   width: 380px;
   height: 460px;
-
-  padding-bottom: 36px;
-
+  display: flex;
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -46,6 +42,14 @@ p {
   );
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px;
 }
 
 .text {
@@ -75,6 +79,43 @@ p {
   border-radius: 10.3108px;
   padding: 14px 56px;
 }
+.button:hover,
+:focus {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: #5cd3a8;
+  outline: 0;
+  outline-offset: 0;
+}
 .button__active {
   background: #5cd3a8;
+}
+
+.logo__box {
+  padding: 20px;
+  width: 76px;
+  height: 20px;
+}
+
+.picture_box {
+  position: absolute;
+  top: 30px;
+  left: 36px;
+}
+
+.avatar__wrapper {
+  position: relative;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elipse {
+  position: absolute;
+  z-index: 30;
+}
+
+.rectangle {
+  position: absolute;
+  z-index: 20;
 }
