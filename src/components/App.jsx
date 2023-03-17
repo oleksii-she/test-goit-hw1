@@ -13,11 +13,11 @@ export const App = () => {
   const [isFollowing, setIsFollowing] = useState(false);
   const [followersCount, setFollowersCount] = useState(100500);
 
-  const LocalKey = 'isFollowing';
+  const LocalKeyBtn = 'isFollowing';
   const LocalKeyNumber = 'followersCount';
 
   useEffect(() => {
-    const localIsFollowing = window.localStorage.getItem(LocalKey);
+    const localIsFollowing = window.localStorage.getItem(LocalKeyBtn);
     const localFollowersCount = window.localStorage.getItem(LocalKeyNumber);
     if (localIsFollowing && localFollowersCount) {
       setIsFollowing(localIsFollowing === 'true');
@@ -33,7 +33,7 @@ export const App = () => {
     } else {
       setIsFollowing(true);
       setFollowersCount(followersCount + 1);
-      window.localStorage.setItem(LocalKey, 'true');
+      window.localStorage.setItem(LocalKeyBtn, 'true');
       window.localStorage.setItem(LocalKeyNumber, followersCount + 1);
     }
   };
