@@ -71,8 +71,8 @@ export const App = () => {
               src={rectangle}
               alt="message"
               className="rectangle"
-              width={380}
-              height={8}
+              width="380"
+              height="8"
             />
           </div>
           <p className="text">777 tweets</p>
